@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300;400;600;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --orange: #F97316;
+}
+
+body {
+  margin: 0;
+  font-family: 'Saira', sans-serif;
+  background-color: #ffffff;
+  color: #111111;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fluid Typography Helpers */
+h1, h2, h3, h4 {
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
+
+/* Smooth transitions for all hover states */
+* {
+  @apply transition-all duration-300 ease-in-out;
+}
