@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { BsArrowRight } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative min-h-screen w-full flex items-center pt-20 overflow-hidden">
       {/* Dynamic Background Image */}
@@ -33,12 +35,12 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-orangeCTA text-white px-8 sm:px-10 py-4 sm:py-5 font-black uppercase text-[10px] tracking-[0.2em] flex items-center justify-center gap-4 hover:bg-richBlack">
-              Get Started <BsArrowRight size={18} />
-            </button>
-            <button className="bg-richBlack text-white px-8 sm:px-10 py-4 sm:py-5 font-black uppercase text-[10px] tracking-[0.2em] hover:bg-orangeCTA">
-              View Doctors
-            </button>
+             <button 
+    onClick={() => navigate('/select-role')}
+    className="bg-orangeCTA text-white px-12 py-6 font-black uppercase text-xs tracking-[0.3em] flex items-center gap-4 hover:bg-richBlack transition-all"
+  >
+    Get Started <BsArrowRight size={18} />
+  </button>
           </div>
         </motion.div>
       </div>
